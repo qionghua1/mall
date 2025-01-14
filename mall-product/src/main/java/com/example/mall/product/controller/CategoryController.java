@@ -42,7 +42,8 @@ public class CategoryController extends BaseController
     @GetMapping("/list")
     public TableDataInfo list(Category category)
     {
-        startPage();
+        // startPage(): 分页操作
+//        startPage();
         List<Category> list = categoryService.selectCategoryList(category);
         return getDataTable(list);
     }

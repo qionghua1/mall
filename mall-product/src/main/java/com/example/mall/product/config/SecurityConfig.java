@@ -2,6 +2,7 @@ package com.example.mall.product.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
@@ -24,8 +25,13 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
+                .csrf(csrf-> csrf.disable())
                 .authorizeHttpRequests((authorize) -> authorize
+                        .requestMatchers(HttpMethod.OPTIONS,"/**").permitAll()
+                        .requestMatchers(HttpMethod.PUT,"/product/category").permitAll()
+//                        .requestMatchers(HttpMethod.PUT,"/product/category/*").permitAll()
                         .requestMatchers("/product/category/list").permitAll()
+                        .requestMatchers("/product/category/**").permitAll()
                         .anyRequest().authenticated()
                 )
                 .httpBasic(Customizer.withDefaults())
