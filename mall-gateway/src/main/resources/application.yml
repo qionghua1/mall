@@ -1,0 +1,79 @@
+spring:
+  cloud:
+
+    # nacos 配置信息
+    nacos:
+      serverAddr: 192.168.2.23:8848
+      # 以下配置项必须填写
+      username: 'nacos'
+      password: 'nacos'
+      config:
+        namespace: 21117664-7c11-4953-9dbc-c158a8a2cab3
+        group: DEFAULT_GROUP
+
+    # Gateway 配置信息
+    gateway:
+      routes:
+        # 优惠券服务路由
+        - id: mall-coupon
+          #uri: http://localhost:7000
+          uri: lb://mall-coupon
+          predicates:
+            - Path=/api/coupon/**
+          filters:
+            - RewritePath=/api/?(?<segment>.*), /$\{segment}
+        # 会员服务路由
+        - id: mall-member
+          #uri: http://localhost:9000
+          uri: lb://mall-member
+          predicates:
+            - Path=/api/member/**
+          filters:
+            - RewritePath=/api/?(?<segment>.*), /$\{segment}
+        # 订单服务路由
+        - id: mall-order
+          #uri: http://localhost:8000
+          uri: lb://mall-order
+          predicates:
+            - Path=/api/order/**
+          filters:
+            - RewritePath=/api/?(?<segment>.*), /$\{segment}
+        # 商品服务路由
+        - id: mall-product
+          #uri: http://localhost:10000
+          uri: lb://mall-product
+          predicates:
+            - Path=/api/product/**
+          filters:
+            - RewritePath=/api/?(?<segment>.*), /$\{segment}
+        # 仓库服务路由
+        - id: mall-ware
+          #uri: http://localhost:11000
+          uri: lb://mall-ware
+          predicates:
+            - Path=/api/ware/**
+          filters:
+            - RewritePath=/api/?(?<segment>.*), /$\{segment}
+        # 若依后台管理服务路由
+        - id: ruoyi-admin
+          #uri: http://localhost:8080
+          uri: lb://ruoyi-admin
+          predicates:
+            - Path=/api/**
+          filters:
+            - RewritePath=/api/?(?<segment>.*), /$\{segment}
+
+      # noinspection SpellCheckingInspection
+      # 跨域配置：默认全部放行
+      globalcors:
+        cors-configurations:
+          '[/**]':
+            allowed-headers: "*"
+            allowed-methods: "*"
+            allowed-origins: "*"
+
+  config:
+    import:
+      - nacos:mall-gateway.yml?refreshEnabled=true
+server:
+  port: 88

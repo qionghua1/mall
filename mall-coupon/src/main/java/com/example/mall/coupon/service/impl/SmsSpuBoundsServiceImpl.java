@@ -11,7 +11,7 @@ import com.example.mall.coupon.service.ISmsSpuBoundsService;
  * 商品spu积分设置Service业务层处理
  * 
  * @author qionghua1
- * @date 2025-01-01
+ * @date 2025-01-05
  */
 @Service
 public class SmsSpuBoundsServiceImpl implements ISmsSpuBoundsService 

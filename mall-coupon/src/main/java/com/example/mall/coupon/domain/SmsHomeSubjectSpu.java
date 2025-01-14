@@ -9,7 +9,7 @@ import com.ruoyi.common.core.domain.BaseEntity;
  * 专题商品对象 sms_home_subject_spu
  * 
  * @author qionghua1
- * @date 2025-01-01
+ * @date 2025-01-05
  */
 public class SmsHomeSubjectSpu extends BaseEntity
 {

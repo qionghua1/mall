@@ -37,6 +37,7 @@ public class CategoryController extends BaseController
     /**
      * 查询商品三级分类列表
      */
+
     @PreAuthorize("@ss.hasPermi('product:category:list')")
     @GetMapping("/list")
     public TableDataInfo list(Category category)

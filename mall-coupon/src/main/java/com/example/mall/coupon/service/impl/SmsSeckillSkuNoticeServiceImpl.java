@@ -11,7 +11,7 @@ import com.example.mall.coupon.service.ISmsSeckillSkuNoticeService;
  * 秒杀商品通知订阅Service业务层处理
  * 
  * @author qionghua1
- * @date 2025-01-01
+ * @date 2025-01-05
  */
 @Service
 public class SmsSeckillSkuNoticeServiceImpl implements ISmsSeckillSkuNoticeService 

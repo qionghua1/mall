@@ -4,6 +4,19 @@ spring:
     password: root
     url: jdbc:mysql://192.168.2.23:3306/mall_sms
     driver-class-name: com.mysql.cj.jdbc.Driver
+  cloud:
+    nacos:
+      serverAddr: 192.168.2.23:8848
+      # 以下配置项必须填写
+      username: 'nacos'
+      password: 'nacos'
+      config:
+        namespace: 35f6a8e2-14a0-4f00-b006-6ead643bda8f
+        group: dev
+  config:
+    import:
+      - nacos:mall-coupon.properties?refreshEnabled=true
+
 mybatis-plus:
   mapper-locations: "classpath:/mapper/**/*.xml"
   type-aliases-package: com.example.mall.coupon.domain

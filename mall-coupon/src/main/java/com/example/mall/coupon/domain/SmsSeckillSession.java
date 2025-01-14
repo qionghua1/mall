@@ -11,7 +11,7 @@ import com.ruoyi.common.core.domain.BaseEntity;
  * 秒杀活动场次对象 sms_seckill_session
  * 
  * @author qionghua1
- * @date 2025-01-01
+ * @date 2025-01-05
  */
 public class SmsSeckillSession extends BaseEntity
 {

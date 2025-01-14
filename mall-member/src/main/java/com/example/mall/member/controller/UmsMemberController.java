@@ -1,6 +1,9 @@
 package com.example.mall.member.controller;
 
+import java.util.HashMap;
 import java.util.List;
+
+import com.example.mall.member.feign.CouponFeignService;
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,6 +37,20 @@ public class UmsMemberController extends BaseController
     @Autowired
     private IUmsMemberService umsMemberService;
 
+    @Autowired
+    CouponFeignService couponFeignService;
+
+
+    @RequestMapping("/coupons")
+    public HashMap<String, String> test() {
+        UmsMember umsMember = new UmsMember();
+        umsMember.setNickname("张三");
+        HashMap<String, String> memberCoupons = couponFeignService.MemberCoupons();
+        HashMap<String, String> endResult = new HashMap<String, String>();
+        endResult.put("member", umsMember.getNickname());
+        endResult.put("coupons", memberCoupons.get("coupons"));
+        return endResult;
+    }
     /**
      * 查询会员列表
      */

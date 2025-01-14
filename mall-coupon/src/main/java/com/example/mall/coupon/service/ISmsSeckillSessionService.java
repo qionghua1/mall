@@ -7,7 +7,7 @@ import com.example.mall.coupon.domain.SmsSeckillSession;
  * 秒杀活动场次Service接口
  * 
  * @author qionghua1
- * @date 2025-01-01
+ * @date 2025-01-05
  */
 public interface ISmsSeckillSessionService 
 {

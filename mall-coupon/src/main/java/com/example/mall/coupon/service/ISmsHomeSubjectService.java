@@ -7,7 +7,7 @@ import com.example.mall.coupon.domain.SmsHomeSubject;
  * 首页专题【jd首页下面很多专题，每个专题链接新的页面，展示专题商品信息】Service接口
  * 
  * @author qionghua1
- * @date 2025-01-01
+ * @date 2025-01-05
  */
 public interface ISmsHomeSubjectService 
 {

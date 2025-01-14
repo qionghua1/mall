@@ -10,7 +10,7 @@ import com.ruoyi.common.core.domain.BaseEntity;
  * 商品spu积分设置对象 sms_spu_bounds
  * 
  * @author qionghua1
- * @date 2025-01-01
+ * @date 2025-01-05
  */
 public class SmsSpuBounds extends BaseEntity
 {

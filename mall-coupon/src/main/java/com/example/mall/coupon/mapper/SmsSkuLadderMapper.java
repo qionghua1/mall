@@ -7,7 +7,7 @@ import com.example.mall.coupon.domain.SmsSkuLadder;
  * 商品阶梯价格Mapper接口
  * 
  * @author qionghua1
- * @date 2025-01-01
+ * @date 2025-01-05
  */
 public interface SmsSkuLadderMapper 
 {

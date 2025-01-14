@@ -7,7 +7,7 @@ import com.example.mall.coupon.domain.SmsSpuBounds;
  * 商品spu积分设置Service接口
  * 
  * @author qionghua1
- * @date 2025-01-01
+ * @date 2025-01-05
  */
 public interface ISmsSpuBoundsService 
 {

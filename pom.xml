@@ -18,7 +18,7 @@
         <module>mall-ware</module>
         <module>RuoYi-Vue</module>
         <module>mall-common</module>
-
+        <module>mall-gateway</module>
     </modules>
 
 </project>

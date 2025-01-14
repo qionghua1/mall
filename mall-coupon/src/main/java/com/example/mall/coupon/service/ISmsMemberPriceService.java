@@ -7,7 +7,7 @@ import com.example.mall.coupon.domain.SmsMemberPrice;
  * 商品会员价格Service接口
  * 
  * @author qionghua1
- * @date 2025-01-01
+ * @date 2025-01-05
  */
 public interface ISmsMemberPriceService 
 {

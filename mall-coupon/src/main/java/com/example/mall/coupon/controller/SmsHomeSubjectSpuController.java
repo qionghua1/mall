@@ -25,7 +25,7 @@ import com.ruoyi.common.core.page.TableDataInfo;
  * 专题商品Controller
  * 
  * @author qionghua1
- * @date 2025-01-01
+ * @date 2025-01-05
  */
 @RestController
 @RequestMapping("/coupon/subjectSpu")

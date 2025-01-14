@@ -11,7 +11,7 @@ import com.ruoyi.common.core.domain.BaseEntity;
  * 秒杀商品通知订阅对象 sms_seckill_sku_notice
  * 
  * @author qionghua1
- * @date 2025-01-01
+ * @date 2025-01-05
  */
 public class SmsSeckillSkuNotice extends BaseEntity
 {

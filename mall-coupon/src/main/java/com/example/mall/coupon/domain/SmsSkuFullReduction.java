@@ -10,7 +10,7 @@ import com.ruoyi.common.core.domain.BaseEntity;
  * 商品满减信息对象 sms_sku_full_reduction
  * 
  * @author qionghua1
- * @date 2025-01-01
+ * @date 2025-01-05
  */
 public class SmsSkuFullReduction extends BaseEntity
 {

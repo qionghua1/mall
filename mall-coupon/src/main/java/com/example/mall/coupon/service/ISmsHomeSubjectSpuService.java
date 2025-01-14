@@ -7,7 +7,7 @@ import com.example.mall.coupon.domain.SmsHomeSubjectSpu;
  * 专题商品Service接口
  * 
  * @author qionghua1
- * @date 2025-01-01
+ * @date 2025-01-05
  */
 public interface ISmsHomeSubjectSpuService 
 {

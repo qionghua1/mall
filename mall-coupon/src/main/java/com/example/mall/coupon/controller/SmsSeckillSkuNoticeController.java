@@ -25,7 +25,7 @@ import com.ruoyi.common.core.page.TableDataInfo;
  * 秒杀商品通知订阅Controller
  * 
  * @author qionghua1
- * @date 2025-01-01
+ * @date 2025-01-05
  */
 @RestController
 @RequestMapping("/coupon/notice")
